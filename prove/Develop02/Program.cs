@@ -25,25 +25,25 @@ class Program
             {
                 Console.WriteLine(menuItem);
             }
+            menuUserinput = int.Parse(Console.ReadLine());
             
-            if (menuUserinput == 1)
-            {
-                journal.CreateJournalEntry();
+                if (menuUserinput == 1)
+                {
+                    journal.CreateJournalEntry();
 
-            }
-            if (menuUserinput == 2)
-            {
-                journal.DisplayJournalEntries();
-            }
-            if (menuUserinput == 3)
-            {
-                journal.SaveToCSV();
-            }
-            if (menuUserinput == 4)
-            {
-                journal.DisplayJournalEntries();
-            }
-            
+                }
+                if (menuUserinput == 2)
+                {
+                    journal.DisplayJournalEntries();
+                }
+                if (menuUserinput == 3)
+                {
+                    journal.SaveToCSV();
+                }
+                if (menuUserinput == 4)
+                {
+                    journal.DisplayJournalEntries();
+                }
         }
     }
 }
