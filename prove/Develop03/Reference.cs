@@ -1,26 +1,33 @@
 using System;
+
 class Reference
 {
-    private string book,chapter, verseStart, verseEnd;
 
-    public Reference (string _book, string _chapter, string _verse);
+    private string book, chapter, verseStart, verseEnd;
+
+    public Reference (string _book, string _chapter, string _verse)
     {
         book = _book;
         chapter = _chapter;
         verseStart = _verse;
         verseEnd = "";
     }
-
-    public Reference (string _book, string _chapter, string _verseStart, string _verseEnd);
+    public Reference (string _book, string _chapter, string _verseStart, string _verseEnd)
     {
         book = _book;
         chapter = _chapter;
         verseStart = _verseStart;
         verseEnd = _verseEnd;
     }
-
-    public string GetReference();
+    public string GetReference()
     {
-        return "";
+        if (verseEnd == "")
+        {
+            return ($"{book} {chapter}: {verseStart}");
+        } 
+        else
+        {
+            return ($"{book} {chapter}: {verseStart}-{verseEnd}");
+        }
     }
 }
