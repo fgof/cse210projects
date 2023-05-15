@@ -1,9 +1,16 @@
 using System;
-
-class Program
+public class WritingAssignment : Assignment
 {
-    static void Main(string[] args)
+    private string _title;
+    public WritingAssignment(string studentName, string topic, string title)
+        : base(studentName, topic)
     {
-        Console.WriteLine("Hello Learning04 World!");
+        _title = title;
+    }
+
+    public string GetWritingInformation()
+    {
+        string studentName = GetStudentName();
+        return $"{_title} by {studentName}";
     }
 }
